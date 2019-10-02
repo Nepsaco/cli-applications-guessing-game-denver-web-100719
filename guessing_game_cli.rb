@@ -4,13 +4,13 @@ end
 
 def run_guessing_game
   #user_prompt
-  input =  gets.chomp
+  input =  gets.strip
   number =  rand(6) + 1
     if input == "exit"
       puts "Goodbye!"
-    elsif (1..6).to_a.none?(input.to_i) 
-      puts "Sorry! The computer guessed #{number}"
-    else
+    elsif number.to_a.include?(input.to_i) 
       puts "You guessed the correct number!"
+    else
+      puts "Sorry! The computer guessed #{number}"
   end
 end
