@@ -6,11 +6,11 @@ def run_guessing_game
   #user_prompt
   input =  gets.chomp
   number =  rand(6) + 1
-    if input.to_i.include?(number)
-      puts "/You guessed the correct number!/"
-    elsif input == "exit" 
+    if input == "exit"
       puts "Goodbye!"
-    else
+    elsif input == "exit" 
       puts "/Sorry! The computer guessed #{number}/"
+      puts "/You guessed the correct number!/"
+    else
   end
 end
