@@ -8,9 +8,9 @@ def run_guessing_game
   number =  rand(6) + 1
     if input == "exit"
       puts "Goodbye!"
-    elsif input == "exit" 
-      puts "/Sorry! The computer guessed #{number}/"
-      puts "/You guessed the correct number!/"
+    elsif (1..6).to_a.include?(input.to_i) 
+      puts "You guessed the correct number!"
     else
+      puts "Sorry! The computer guessed #{number}"
   end
 end
